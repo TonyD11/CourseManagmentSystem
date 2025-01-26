@@ -8,12 +8,11 @@ namespace CourseManagmentSystem.Model
 {
     internal class User
     {
-        public User(string username, string password, string email, string role)
+        public User(string username, string password, string email)
         {
             Username = username;
             Password = password;
             Email = email;
-            Role = role;
         }
 
         public int Id { get; set; }

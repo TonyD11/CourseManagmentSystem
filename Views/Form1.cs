@@ -1,4 +1,6 @@
-﻿using System;
+﻿using CourseManagmentSystem.Model;
+using CourseManagmentSystem.Views;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -23,6 +25,10 @@ namespace CourseManagmentSystem
             string password = textBox2.Text;
             string cpassword = textBox3.Text;
             string email = textBox4.Text;
+            string role= comboBox1.Text;
+
+
+            bool created = false;
 
             if (password != cpassword)
             {
@@ -48,14 +54,47 @@ namespace CourseManagmentSystem
                 return;
             }
 
-            // Create a new user
-            Model.User user = new Model.User(username, password, email, "user");
+            if (role == "")
+            {
+                MessageBox.Show("Please select a role");
+                return;
+            }
 
-            // Create a new AuthController
-            Controller.AuthController authController = new Controller.AuthController();
+            if (role == "instructor")
+            {
+                Model.Instructor instructor = new Model.Instructor(username, password, email);
+                 // Create a new AuthController
+                Controller.AuthController authController = new Controller.AuthController();
 
-            // Call the CreateUser method
-            authController.CreateUser(user);
+                // Call the CreateUser method
+                created = authController.CreateUser(instructor);
+                
+            }
+            if (role == "student")
+            {
+                Model.Student student = new Model.Student(username, password, email);
+
+
+                // Create a new AuthController
+                Controller.AuthController authController = new Controller.AuthController();
+
+                // Call the CreateUser method
+                created = authController.CreateUser(student);
+            }
+
+            if (created)
+            {
+                this.Hide();
+                Login login = new Login();
+                login.Show();
+            }
+            else
+            {
+                textBox1.Text = "";
+                textBox2.Text = "";
+                textBox3.Text = "";
+                textBox4.Text = "";
+            }
 
         }
     }

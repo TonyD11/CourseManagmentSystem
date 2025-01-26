@@ -114,6 +114,8 @@
   <ItemGroup>
     <Compile Include="AppDbContext.cs" />
     <Compile Include="Controller\AuthController.cs" />
+    <Compile Include="Model\Instructor.cs" />
+    <Compile Include="Model\Student.cs" />
     <Compile Include="Views\Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -128,6 +130,24 @@
     <Compile Include="Model\User.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Views\Instructor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Instructor.Designer.cs">
+      <DependentUpon>Instructor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Student.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Student.Designer.cs">
+      <DependentUpon>Student.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Migrations\202501262031564_InitialCreate.resx">
       <DependentUpon>202501262031564_InitialCreate.cs</DependentUpon>
     </EmbeddedResource>
@@ -142,6 +162,9 @@
     </Compile>
     <EmbeddedResource Include="Views\Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
