@@ -8,6 +8,7 @@ namespace CourseManagmentSystem.Model
 {
     internal class Student : User
     {
+        public Student() { }
         public Student(string username, string password, string email) : base(username, password, email)
         {
             Role = "student";

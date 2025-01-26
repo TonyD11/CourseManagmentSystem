@@ -26,7 +26,7 @@ namespace CourseManagmentSystem.Controller
                 }
                 catch (Exception e)
                 {
-                    MessageBox.Show("An error occured while creating the user");
+                    MessageBox.Show($"An error occured while creating the user {e.Message}");
                     return false;
                 }
                 

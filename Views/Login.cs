@@ -36,7 +36,7 @@ namespace CourseManagmentSystem.Views
 
             if (role == "instructor")
             {
-                Instructor admin = new Instructor();
+                Instructor admin = new Instructor(username);
                 admin.Show();
                 this.Hide();
             }

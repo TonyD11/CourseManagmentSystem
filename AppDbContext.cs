@@ -14,6 +14,7 @@ namespace CourseManagmentSystem
         public AppDbContext() : base("name=MySqlConnection") { }
 
         public DbSet<User> Users { get; set; }
+        public DbSet<Course> Courses { get; set; }
     }
 
     

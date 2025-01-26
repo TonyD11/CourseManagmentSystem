@@ -8,6 +8,10 @@ namespace CourseManagmentSystem.Model
 {
     internal class User
     {
+        public User()
+        {
+        }
+
         public User(string username, string password, string email)
         {
             Username = username;

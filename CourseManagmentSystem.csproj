@@ -114,19 +114,27 @@
   <ItemGroup>
     <Compile Include="AppDbContext.cs" />
     <Compile Include="Controller\AuthController.cs" />
+    <Compile Include="Controller\CourseController.cs" />
+    <Compile Include="Migrations\202501262316248_InitialMiragation.cs" />
+    <Compile Include="Migrations\202501262316248_InitialMiragation.Designer.cs">
+      <DependentUpon>202501262316248_InitialMiragation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Model\Course.cs" />
     <Compile Include="Model\Instructor.cs" />
     <Compile Include="Model\Student.cs" />
+    <Compile Include="Views\CreateCourse.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\CreateCourse.Designer.cs">
+      <DependentUpon>CreateCourse.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\Form1.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Views\Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202501262031564_InitialCreate.cs" />
-    <Compile Include="Migrations\202501262031564_InitialCreate.Designer.cs">
-      <DependentUpon>202501262031564_InitialCreate.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Model\User.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -148,8 +156,8 @@
     <Compile Include="Views\Student.Designer.cs">
       <DependentUpon>Student.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Migrations\202501262031564_InitialCreate.resx">
-      <DependentUpon>202501262031564_InitialCreate.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202501262316248_InitialMiragation.resx">
+      <DependentUpon>202501262316248_InitialMiragation.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -160,8 +168,14 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Views\CreateCourse.resx">
+      <DependentUpon>CreateCourse.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Instructor.resx">
+      <DependentUpon>Instructor.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>

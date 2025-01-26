@@ -60,7 +60,7 @@ namespace CourseManagmentSystem
                 return;
             }
 
-            if (role == "instructor")
+            if (role == "Instructor")
             {
                 Model.Instructor instructor = new Model.Instructor(username, password, email);
                  // Create a new AuthController
@@ -96,6 +96,13 @@ namespace CourseManagmentSystem
                 textBox4.Text = "";
             }
 
+        }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            this.Hide();
+            Login login = new Login();
+            login.Show();
         }
     }
 }
