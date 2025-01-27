@@ -54,5 +54,18 @@ namespace CourseManagmentSystem.Controller
                 MessageBox.Show("Course Updated Successfully");
             }
         }
+
+        //Delete Course
+        public void DeleteCourse(string code)
+        {
+            using (var db = new AppDbContext())
+            {
+                Course courseToDelete = db.Courses.Where(c => c.Code == code).FirstOrDefault();
+                db.Courses.Remove(courseToDelete);
+                db.SaveChanges();
+
+                MessageBox.Show("Course Deleted Successfully");
+            }
+        }
     }
 }
