@@ -42,5 +42,10 @@ namespace CourseManagmentSystem.Views
         {
             panelController(new CreateCourse(username));
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            panelController(new EditCourse(username));
+        }
     }
 }
