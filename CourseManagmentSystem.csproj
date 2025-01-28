@@ -134,6 +134,12 @@
     <Compile Include="Views\AssessmentDashboard.Designer.cs">
       <DependentUpon>AssessmentDashboard.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\CreateAssessment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\CreateAssessment.Designer.cs">
+      <DependentUpon>CreateAssessment.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\CreateCourse.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -196,6 +202,9 @@
     </Compile>
     <EmbeddedResource Include="Views\AssessmentDashboard.resx">
       <DependentUpon>AssessmentDashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\CreateAssessment.resx">
+      <DependentUpon>CreateAssessment.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\CreateCourse.resx">
       <DependentUpon>CreateCourse.cs</DependentUpon>
