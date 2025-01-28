@@ -43,5 +43,10 @@ namespace CourseManagmentSystem.Views
         {
             panelController(new CreateAssessment(username));
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            panelController(new EditAssessment(username));
+        }
     }
 }
