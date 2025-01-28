@@ -48,7 +48,14 @@ namespace CourseManagmentSystem.Views
             panelController(new EditCourse(username));
         }
 
-        private void panel2_Paint(object sender, PaintEventArgs e)
+       
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            panelController(new AssessmentDashboard(username));
+        }
+
+        private void button3_Click(object sender, EventArgs e)
         {
             panelController(new DeleteCourse(username));
         }

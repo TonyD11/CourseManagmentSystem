@@ -119,10 +119,21 @@
     <Compile Include="Migrations\202501262316248_InitialMiragation.Designer.cs">
       <DependentUpon>202501262316248_InitialMiragation.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202501272356263_Assessment.cs" />
+    <Compile Include="Migrations\202501272356263_Assessment.Designer.cs">
+      <DependentUpon>202501272356263_Assessment.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Model\Assessment.cs" />
     <Compile Include="Model\Course.cs" />
     <Compile Include="Model\Instructor.cs" />
     <Compile Include="Model\Student.cs" />
+    <Compile Include="Views\AssessmentDashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\AssessmentDashboard.Designer.cs">
+      <DependentUpon>AssessmentDashboard.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\CreateCourse.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -171,6 +182,9 @@
     <EmbeddedResource Include="Migrations\202501262316248_InitialMiragation.resx">
       <DependentUpon>202501262316248_InitialMiragation.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202501272356263_Assessment.resx">
+      <DependentUpon>202501272356263_Assessment.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -180,6 +194,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Views\AssessmentDashboard.resx">
+      <DependentUpon>AssessmentDashboard.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\CreateCourse.resx">
       <DependentUpon>CreateCourse.cs</DependentUpon>
     </EmbeddedResource>

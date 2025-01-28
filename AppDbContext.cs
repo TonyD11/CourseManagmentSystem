@@ -15,6 +15,8 @@ namespace CourseManagmentSystem
 
         public DbSet<User> Users { get; set; }
         public DbSet<Course> Courses { get; set; }
+
+        public DbSet<Assessment> Assessments { get; set; }
     }
 
     
