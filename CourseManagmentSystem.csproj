@@ -113,6 +113,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AppDbContext.cs" />
+    <Compile Include="Controller\AssessmentController.cs" />
     <Compile Include="Controller\AuthController.cs" />
     <Compile Include="Controller\CourseController.cs" />
     <Compile Include="Migrations\202501262316248_InitialMiragation.cs" />

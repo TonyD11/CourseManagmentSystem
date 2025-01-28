@@ -8,9 +8,9 @@ namespace CourseManagmentSystem.Model
 {
     internal class Assessment
     {
-        public Assessment(int id, Course course, string name, string description, DateTime dueDate)
+        public Assessment(Course course, string name, string description, DateTime dueDate)
         {
-            Id = id;
+            
             Course = course;
             Name = name;
             Description = description;
