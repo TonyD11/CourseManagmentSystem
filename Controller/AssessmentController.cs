@@ -16,6 +16,8 @@ namespace CourseManagmentSystem.Controller
             {
                 try
                 {
+                    db.Courses.Attach(assessment.Course);
+
                     db.Assessments.Add(assessment);
                     db.SaveChanges();
 
@@ -40,7 +42,7 @@ namespace CourseManagmentSystem.Controller
             {
                 using (AppDbContext db = new AppDbContext()) 
                 {
-                    List<Assessment> assessment = db.Assessments.Where(a => a.Course == course).ToList();
+                    List<Assessment> assessment = db.Assessments.Where(a => a.Course.Id == course.Id).ToList();
 
                     return assessment;
                 }
