@@ -8,6 +8,7 @@ namespace CourseManagmentSystem.Model
 {
     internal class Assessment
     {
+        public Assessment() { }
         public Assessment(Course course, string name, string description, DateTime dueDate)
         {
             
