@@ -153,6 +153,12 @@
     <Compile Include="Views\DeleteCourse.Designer.cs">
       <DependentUpon>DeleteCourse.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\EditAssessment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\EditAssessment.Designer.cs">
+      <DependentUpon>EditAssessment.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\EditCourse.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -212,6 +218,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Views\DeleteCourse.resx">
       <DependentUpon>DeleteCourse.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\EditAssessment.resx">
+      <DependentUpon>EditAssessment.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\EditCourse.resx">
       <DependentUpon>EditCourse.cs</DependentUpon>

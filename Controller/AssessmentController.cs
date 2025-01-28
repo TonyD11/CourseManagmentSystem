@@ -29,7 +29,35 @@ namespace CourseManagmentSystem.Controller
                     MessageBox.Show($"An error occured while creating the Assesment {e.Message}");
                     return false;
                 }
+            }
+        }
 
+        public List<Assessment> getAssessmnetsOfCourse(string code)
+        {
+            Course course = new CourseController().GetCourse(code);
+
+            try
+            {
+                using (AppDbContext db = new AppDbContext()) 
+                {
+                    List<Assessment> assessment = db.Assessments.Where(a => a.Course == course).ToList();
+
+                    return assessment;
+                }
+            }
+            catch (Exception e) { 
+                MessageBox.Show(e.Message);
+
+                return null;
+            }
+
+        }
+
+        public Assessment getfromname(string name)
+        {
+            using (var db = new AppDbContext())
+            {
+                return db.Assessments.Where(c => c.Name == name).FirstOrDefault();
             }
         }
     }
