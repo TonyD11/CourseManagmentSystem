@@ -76,5 +76,19 @@ namespace CourseManagmentSystem.Controller
                 MessageBox.Show("Assignment has been updated");
             }
         }
+
+        public void RemoveAssesment(string cname, string aname)
+        {
+            using (var db = new AppDbContext())
+            {
+                Course course = db.Courses.Where(c =>c.Code == cname).FirstOrDefault();
+                Assessment assessment = db.Assessments.Where(a =>a.Name == aname && a.Course.Id == course.Id).FirstOrDefault();
+
+                db.Assessments.Remove(assessment);
+                db.SaveChanges();
+
+                MessageBox.Show($"{aname} has removed");
+            }
+        }
     }
 }
