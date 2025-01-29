@@ -34,7 +34,7 @@ namespace CourseManagmentSystem.Views
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            string code = comboBox1.SelectedIndex.ToString();
+            string code = comboBox1.Text;
 
             //get the Assesments in the course
             AssessmentController controller = new AssessmentController();
@@ -42,20 +42,31 @@ namespace CourseManagmentSystem.Views
 
             foreach (Assessment assessment in assessments) 
             {
-                comboBox1.Items.Add(assessment.Name);
+                comboBox2.Items.Add(assessment.Name);
             }
 
         }
 
         private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
         {
-            string name = comboBox2.SelectedIndex.ToString();
+            string name = comboBox2.Text;
 
             AssessmentController assessmentcontroller = new AssessmentController();
 
             Assessment assessment = assessmentcontroller.getfromname(name);
 
-            dateTimePicker1.Value = assessment.DueDate;
+            dateTimePicker1.Value = assessment.DueDate.ToLocalTime();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            string cname = comboBox1.Text;
+            string name = comboBox2.Text;
+            DateTime newdate = dateTimePicker1.Value;
+
+            AssessmentController assessmentController = new AssessmentController();
+            assessmentController.UpdateAssesment(cname, name, newdate);
+
         }
     }
 }

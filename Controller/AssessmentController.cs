@@ -62,5 +62,19 @@ namespace CourseManagmentSystem.Controller
                 return db.Assessments.Where(c => c.Name == name).FirstOrDefault();
             }
         }
+
+        public void UpdateAssesment(string cname, string aname, DateTime duedate)
+        {
+            using (var db = new AppDbContext())
+            { 
+                Course course = db.Courses.Where(c => c.Code == cname).FirstOrDefault();
+                Assessment assignmentToUpdate = db.Assessments.Where(a => a.Name == aname && a.Course.Id == course.Id).FirstOrDefault();
+
+                assignmentToUpdate.DueDate = duedate;
+
+                db.SaveChanges();
+                MessageBox.Show("Assignment has been updated");
+            }
+        }
     }
 }
