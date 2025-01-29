@@ -67,6 +67,10 @@ namespace CourseManagmentSystem.Views
             AssessmentController assessmentController = new AssessmentController();
             assessmentController.UpdateAssesment(cname, name, newdate);
 
+            comboBox1.Items.Clear();
+            comboBox2.Items.Clear();
+            dateTimePicker1 = new DateTimePicker();
+
         }
     }
 }

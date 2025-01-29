@@ -47,6 +47,8 @@ namespace CourseManagmentSystem.Views
             AssessmentController assessmentController = new AssessmentController();
             assessmentController.CreateAssesment(assessment);
 
+            this.Hide();
+
         }
     }
 }
