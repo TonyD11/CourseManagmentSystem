@@ -127,6 +127,7 @@
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Model\Assessment.cs" />
     <Compile Include="Model\Course.cs" />
+    <Compile Include="Model\Enrollment.cs" />
     <Compile Include="Model\Instructor.cs" />
     <Compile Include="Model\Student.cs" />
     <Compile Include="Views\AssessmentDashboard.cs">
