@@ -17,6 +17,8 @@ namespace CourseManagmentSystem
         public DbSet<Course> Courses { get; set; }
 
         public DbSet<Assessment> Assessments { get; set; }
+
+        public DbSet<Enrollment> Enrollments { get; set; }
     }
 
     
