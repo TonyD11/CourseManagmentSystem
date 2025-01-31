@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using CourseManagmentSystem.Controller;
 
 namespace CourseManagmentSystem.Views
 {
@@ -21,7 +22,10 @@ namespace CourseManagmentSystem.Views
 
         private void EnrollmentRequest_Load(object sender, EventArgs e)
         {
-            
+            EnrollmentController enrollmentController = new EnrollmentController();
+            DataTable dataTable = enrollmentController.getAllEnrollemtRequest(username);
+
+            dataGridView1.DataSource = dataTable;
         }
     }
 }
