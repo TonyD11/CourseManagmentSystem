@@ -63,5 +63,17 @@ namespace CourseManagmentSystem.Controller
                 MessageBox.Show("Enrollment Has been Requested");
             }
         }
+
+        public void updateEnrollment(Enrollment enrollment)
+        {
+            using (AppDbContext db = new AppDbContext())
+            {
+                //check if the enrollment exists FROM course and user
+                Enrollment enrollmentToUpdate = db.Enrollments.Where(e => e.Course.Id == enrollment.Course.Id && e.User.Id == enrollment.User.Id).FirstOrDefault();
+                enrollmentToUpdate.Status = enrollment.Status;
+                db.SaveChanges();
+                MessageBox.Show("Enrollment Updated Successfully");
+            }
+        }
     }
 }

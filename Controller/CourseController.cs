@@ -78,5 +78,13 @@ namespace CourseManagmentSystem.Controller
                 return allCourses;
             }
         }
+
+        public Course GetCourseDetails(string courseName)
+        {
+            using (var db = new AppDbContext())
+            {
+                return db.Courses.Where(c => c.Name == courseName).FirstOrDefault();
+            }
+        }
     }
 }
