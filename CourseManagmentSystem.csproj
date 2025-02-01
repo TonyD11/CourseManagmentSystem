@@ -177,6 +177,12 @@
     <Compile Include="Views\EditCourse.Designer.cs">
       <DependentUpon>EditCourse.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\Enrollment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Enrollment.Designer.cs">
+      <DependentUpon>Enrollment.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\EnrollmentRequest.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -249,6 +255,9 @@
     <EmbeddedResource Include="Views\EditCourse.resx">
       <DependentUpon>EditCourse.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Views\Enrollment.resx">
+      <DependentUpon>Enrollment.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\EnrollmentRequest.resx">
       <DependentUpon>EnrollmentRequest.cs</DependentUpon>
     </EmbeddedResource>
@@ -260,6 +269,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Views\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Student.resx">
+      <DependentUpon>Student.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
