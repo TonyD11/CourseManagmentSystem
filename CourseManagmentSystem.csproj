@@ -117,6 +117,7 @@
     <Compile Include="Controller\AuthController.cs" />
     <Compile Include="Controller\CourseController.cs" />
     <Compile Include="Controller\EnrollmentController.cs" />
+    <Compile Include="Controller\UserController.cs" />
     <Compile Include="Migrations\202501262316248_InitialMiragation.cs" />
     <Compile Include="Migrations\202501262316248_InitialMiragation.Designer.cs">
       <DependentUpon>202501262316248_InitialMiragation.cs</DependentUpon>
@@ -177,11 +178,11 @@
     <Compile Include="Views\EditCourse.Designer.cs">
       <DependentUpon>EditCourse.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\Enrollment.cs">
+    <Compile Include="Views\EnrollmentForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Views\Enrollment.Designer.cs">
-      <DependentUpon>Enrollment.cs</DependentUpon>
+    <Compile Include="Views\EnrollmentForm.Designer.cs">
+      <DependentUpon>EnrollmentForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\EnrollmentRequest.cs">
       <SubType>Form</SubType>
@@ -255,8 +256,8 @@
     <EmbeddedResource Include="Views\EditCourse.resx">
       <DependentUpon>EditCourse.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Views\Enrollment.resx">
-      <DependentUpon>Enrollment.cs</DependentUpon>
+    <EmbeddedResource Include="Views\EnrollmentForm.resx">
+      <DependentUpon>EnrollmentForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\EnrollmentRequest.resx">
       <DependentUpon>EnrollmentRequest.cs</DependentUpon>

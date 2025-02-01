@@ -12,9 +12,11 @@ namespace CourseManagmentSystem.Views
 {
     public partial class Student : Form
     {
-        public Student()
+        public string username;
+        public Student(string username)
         {
             InitializeComponent();
+            this.username = username;
         }
 
         public void panelController(object Form)
@@ -33,7 +35,7 @@ namespace CourseManagmentSystem.Views
 
         private void button1_Click(object sender, EventArgs e)
         {
-            panelController(new Enrollment());
+            panelController(new EnrollmentForm(username));
         }
     }
 }

@@ -70,7 +70,7 @@ namespace CourseManagmentSystem
                 created = authController.CreateUser(instructor);
                 
             }
-            if (role == "student")
+            if (role == "Student")
             {
                 Model.Student student = new Model.Student(username, password, email);
 

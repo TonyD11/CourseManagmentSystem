@@ -4,6 +4,7 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 using CourseManagmentSystem.Model;
 
 namespace CourseManagmentSystem.Controller
@@ -42,6 +43,16 @@ namespace CourseManagmentSystem.Controller
                 return requests;
 
 
+            }
+        }
+        public void createEnrollment(Enrollment enrollment)
+        {
+            using (AppDbContext db = new AppDbContext())
+            {
+                db.Enrollments.Add(enrollment);
+                db.SaveChanges();
+
+                MessageBox.Show("Enrollment Has been Requested");
             }
         }
     }

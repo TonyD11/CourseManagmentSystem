@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -65,6 +66,16 @@ namespace CourseManagmentSystem.Controller
                 db.SaveChanges();
 
                 MessageBox.Show("Course Deleted Successfully");
+            }
+        }
+
+        public List<Course> GetCourseList()
+        {
+            using (var db = new AppDbContext())
+            {
+                List<Course> allCourses = db.Courses.ToList();
+
+                return allCourses;
             }
         }
     }
