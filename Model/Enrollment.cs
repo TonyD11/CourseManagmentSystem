@@ -9,16 +9,17 @@ namespace CourseManagmentSystem.Model
 {
     internal class Enrollment
     {
-        public Enrollment(User user_id, Course course_id)
+        public Enrollment() { }
+        public Enrollment(User user, Course course)
         {
-            User_id = user_id;
-            Course_id = course_id;
+            User = user;
+            Course = course;
             Status = "Pending";
         }
 
         public int Id { get; set; }
-        public User User_id { get; set; }
-        public Course Course_id { get; set; }
+        public virtual User User { get; set; }  // Use virtual for lazy loading
+        public virtual Course Course { get; set; }
         public string Status { get; set; }
     }
 }

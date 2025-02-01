@@ -27,5 +27,10 @@ namespace CourseManagmentSystem.Views
 
             dataGridView1.DataSource = dataTable;
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
