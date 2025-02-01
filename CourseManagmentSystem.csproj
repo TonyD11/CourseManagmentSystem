@@ -116,6 +116,8 @@
     <Compile Include="Controller\AssessmentController.cs" />
     <Compile Include="Controller\AuthController.cs" />
     <Compile Include="Controller\CourseController.cs" />
+    <Compile Include="Controller\EnrollmentController.cs" />
+    <Compile Include="Controller\UserController.cs" />
     <Compile Include="Migrations\202501262316248_InitialMiragation.cs" />
     <Compile Include="Migrations\202501262316248_InitialMiragation.Designer.cs">
       <DependentUpon>202501262316248_InitialMiragation.cs</DependentUpon>
@@ -124,9 +126,14 @@
     <Compile Include="Migrations\202501272356263_Assessment.Designer.cs">
       <DependentUpon>202501272356263_Assessment.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202502011713547_Enrollment.cs" />
+    <Compile Include="Migrations\202502011713547_Enrollment.Designer.cs">
+      <DependentUpon>202502011713547_Enrollment.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Model\Assessment.cs" />
     <Compile Include="Model\Course.cs" />
+    <Compile Include="Model\Enrollment.cs" />
     <Compile Include="Model\Instructor.cs" />
     <Compile Include="Model\Student.cs" />
     <Compile Include="Views\AssessmentDashboard.cs">
@@ -171,6 +178,18 @@
     <Compile Include="Views\EditCourse.Designer.cs">
       <DependentUpon>EditCourse.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\EnrollmentForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\EnrollmentForm.Designer.cs">
+      <DependentUpon>EnrollmentForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\EnrollmentRequest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\EnrollmentRequest.Designer.cs">
+      <DependentUpon>EnrollmentRequest.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -204,6 +223,9 @@
     <EmbeddedResource Include="Migrations\202501272356263_Assessment.resx">
       <DependentUpon>202501272356263_Assessment.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202502011713547_Enrollment.resx">
+      <DependentUpon>202502011713547_Enrollment.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -234,6 +256,12 @@
     <EmbeddedResource Include="Views\EditCourse.resx">
       <DependentUpon>EditCourse.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Views\EnrollmentForm.resx">
+      <DependentUpon>EnrollmentForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\EnrollmentRequest.resx">
+      <DependentUpon>EnrollmentRequest.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -242,6 +270,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Views\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Student.resx">
+      <DependentUpon>Student.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

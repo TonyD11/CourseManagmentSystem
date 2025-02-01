@@ -42,7 +42,7 @@ namespace CourseManagmentSystem.Views
             }
             else if (role == "student")
             {
-                Student student = new Student();
+                Student student = new Student(username);
                 student.Show();
                 this.Hide();
             }

@@ -59,5 +59,10 @@ namespace CourseManagmentSystem.Views
         {
             panelController(new DeleteCourse(username));
         }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            panelController(new EnrollmentRequest(username));
+        }
     }
 }
