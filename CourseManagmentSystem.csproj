@@ -130,6 +130,10 @@
     <Compile Include="Migrations\202502011713547_Enrollment.Designer.cs">
       <DependentUpon>202502011713547_Enrollment.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202502020826484_submission.cs" />
+    <Compile Include="Migrations\202502020826484_submission.Designer.cs">
+      <DependentUpon>202502020826484_submission.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Model\Assessment.cs" />
     <Compile Include="Model\Course.cs" />
@@ -232,6 +236,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202502011713547_Enrollment.resx">
       <DependentUpon>202502011713547_Enrollment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202502020826484_submission.resx">
+      <DependentUpon>202502020826484_submission.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
