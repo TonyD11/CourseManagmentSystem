@@ -117,6 +117,7 @@
     <Compile Include="Controller\AuthController.cs" />
     <Compile Include="Controller\CourseController.cs" />
     <Compile Include="Controller\EnrollmentController.cs" />
+    <Compile Include="Controller\SubmissionController.cs" />
     <Compile Include="Controller\UserController.cs" />
     <Compile Include="Migrations\202501262316248_InitialMiragation.cs" />
     <Compile Include="Migrations\202501262316248_InitialMiragation.Designer.cs">

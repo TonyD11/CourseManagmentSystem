@@ -35,6 +35,10 @@ namespace CourseManagmentSystem.Views
 
                 string relativeDirectory = "Submissions";
                 string filename = Path.GetFileName(filePath);
+                label4.Text = Path.GetFileName(filePath);
+
+                filename = "submission_" + DateTime.Now.ToString("yyyyMMdd_HHmmss") + Path.GetExtension(filePath);
+
 
                 string relativeFilePath = Path.Combine(relativeDirectory, filename);
 
@@ -47,7 +51,6 @@ namespace CourseManagmentSystem.Views
 
                 fullFilePath = Path.Combine(fullDirectoryPath, filename);
 
-                label4.Text = Path.GetFileName(filePath);
 
             }
         }
@@ -86,6 +89,39 @@ namespace CourseManagmentSystem.Views
                 {
                     comboBox2.Items.Add(assessment.Name);
                 }
+            }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            string cname = comboBox1.Text;
+            string assname = comboBox2.Text;
+            string comments = textBox1.Text;
+
+            try
+            {
+                File.Copy(filePath, fullFilePath);
+
+                AssessmentController assessmentController = new AssessmentController();
+                Assessment assessment = assessmentController.getfromname(assname);
+
+                UserController userController = new UserController();
+                User user = userController.getUserDetails(username);
+
+                DateTime dateTime = DateTime.Now;
+
+                Submissions submissions = new Submissions(assessment, user, dateTime, fullFilePath, comments);
+
+                SubmissionController submissionController = new SubmissionController();
+                submissionController.CreateSubmission(submissions);
+
+
+                this.Hide();
+
+            }
+            catch (Exception ex) 
+            {
+                MessageBox.Show(ex.Message);
             }
         }
     }
