@@ -151,6 +151,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "AssessmentSubmission";
             this.Text = "AssessmentSubmission";
+            this.Load += new System.EventHandler(this.AssessmentSubmission_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

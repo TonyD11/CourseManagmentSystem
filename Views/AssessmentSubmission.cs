@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using CourseManagmentSystem.Controller;
 using CourseManagmentSystem.Model;
 
 namespace CourseManagmentSystem.Views
@@ -54,6 +55,17 @@ namespace CourseManagmentSystem.Views
         private void label5_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void AssessmentSubmission_Load(object sender, EventArgs e)
+        {
+            CourseController courseController = new CourseController();
+            List<Course> courses = courseController.GetCourseList();
+
+            foreach (Course course in courses)
+            {
+                comboBox1.Items.Add(course.Name);
+            }
         }
     }
 }
