@@ -69,5 +69,10 @@ namespace CourseManagmentSystem.Views
         {
             panelController(new GradeSubmission());
         }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            panelController(new StudentsPerformance(username));
+        }
     }
 }

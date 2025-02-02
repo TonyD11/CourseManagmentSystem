@@ -34,5 +34,15 @@ namespace CourseManagmentSystem.Controller
                 MessageBox.Show("User Details Changed");
             }
         }
+
+        public List<User> GetStudents() 
+        {
+            using(AppDbContext db = new AppDbContext())
+            {
+                List<User> users = db.Users.Where(u => u.Role == "student").ToList();
+
+                return users;
+            }
+        }
     }
 }
