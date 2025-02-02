@@ -67,5 +67,26 @@ namespace CourseManagmentSystem.Views
                 comboBox1.Items.Add(course.Name);
             }
         }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            //Get all assignments that are in the course that are not due
+
+            string courseName = comboBox1.Text;
+
+            CourseController courseController1 = new CourseController();
+            Course course = courseController1.GetCourse(courseName);
+
+            AssessmentController assessmentController = new AssessmentController();
+            List<Assessment> assessments = assessmentController.getAssessmnetsOfCourse(course.Code);
+
+            foreach (Assessment assessment in assessments)
+            {
+                if(assessment.DueDate > DateTime.Now)
+                {
+                    comboBox2.Items.Add(assessment.Name);
+                }
+            }
+        }
     }
 }
