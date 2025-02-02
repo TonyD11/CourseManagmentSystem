@@ -117,6 +117,7 @@
     <Compile Include="Controller\AuthController.cs" />
     <Compile Include="Controller\CourseController.cs" />
     <Compile Include="Controller\EnrollmentController.cs" />
+    <Compile Include="Controller\SubmissionController.cs" />
     <Compile Include="Controller\UserController.cs" />
     <Compile Include="Migrations\202501262316248_InitialMiragation.cs" />
     <Compile Include="Migrations\202501262316248_InitialMiragation.Designer.cs">
@@ -130,17 +131,28 @@
     <Compile Include="Migrations\202502011713547_Enrollment.Designer.cs">
       <DependentUpon>202502011713547_Enrollment.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202502020826484_submission.cs" />
+    <Compile Include="Migrations\202502020826484_submission.Designer.cs">
+      <DependentUpon>202502020826484_submission.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Model\Assessment.cs" />
     <Compile Include="Model\Course.cs" />
     <Compile Include="Model\Enrollment.cs" />
     <Compile Include="Model\Instructor.cs" />
     <Compile Include="Model\Student.cs" />
+    <Compile Include="Model\Submissions.cs" />
     <Compile Include="Views\AssessmentDashboard.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Views\AssessmentDashboard.Designer.cs">
       <DependentUpon>AssessmentDashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\AssessmentSubmission.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\AssessmentSubmission.Designer.cs">
+      <DependentUpon>AssessmentSubmission.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\CreateAssessment.cs">
       <SubType>Form</SubType>
@@ -232,6 +244,9 @@
     <EmbeddedResource Include="Migrations\202502011713547_Enrollment.resx">
       <DependentUpon>202502011713547_Enrollment.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202502020826484_submission.resx">
+      <DependentUpon>202502020826484_submission.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -243,6 +258,9 @@
     </Compile>
     <EmbeddedResource Include="Views\AssessmentDashboard.resx">
       <DependentUpon>AssessmentDashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\AssessmentSubmission.resx">
+      <DependentUpon>AssessmentSubmission.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\CreateAssessment.resx">
       <DependentUpon>CreateAssessment.cs</DependentUpon>
@@ -297,7 +315,9 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Submissions\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>
