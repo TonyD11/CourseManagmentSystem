@@ -136,6 +136,7 @@
     <Compile Include="Model\Enrollment.cs" />
     <Compile Include="Model\Instructor.cs" />
     <Compile Include="Model\Student.cs" />
+    <Compile Include="Model\Submissions.cs" />
     <Compile Include="Views\AssessmentDashboard.cs">
       <SubType>Form</SubType>
     </Compile>
