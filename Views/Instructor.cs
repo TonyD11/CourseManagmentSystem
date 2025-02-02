@@ -64,5 +64,10 @@ namespace CourseManagmentSystem.Views
         {
             panelController(new EnrollmentRequest(username));
         }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            panelController(new GradeSubmission());
+        }
     }
 }

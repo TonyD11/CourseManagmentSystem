@@ -211,6 +211,12 @@
     <Compile Include="Model\User.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Views\GradeSubmission.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\GradeSubmission.Designer.cs">
+      <DependentUpon>GradeSubmission.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\Instructor.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -234,6 +240,12 @@
     </Compile>
     <Compile Include="Views\StudentEdit.Designer.cs">
       <DependentUpon>StudentEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\StudentsPerformance.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\StudentsPerformance.Designer.cs">
+      <DependentUpon>StudentsPerformance.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Migrations\202501262316248_InitialMiragation.resx">
       <DependentUpon>202501262316248_InitialMiragation.cs</DependentUpon>
@@ -289,6 +301,9 @@
     <EmbeddedResource Include="Views\Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Views\GradeSubmission.resx">
+      <DependentUpon>GradeSubmission.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\Instructor.resx">
       <DependentUpon>Instructor.cs</DependentUpon>
     </EmbeddedResource>
@@ -300,6 +315,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Views\StudentEdit.resx">
       <DependentUpon>StudentEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\StudentsPerformance.resx">
+      <DependentUpon>StudentsPerformance.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

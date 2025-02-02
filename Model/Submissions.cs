@@ -8,6 +8,7 @@ namespace CourseManagmentSystem.Model
 {
     internal class Submissions
     {
+        public Submissions() { }
         public Submissions(Assessment assessment, User user, DateTime submissionDate, string filePath, string comments)
         {
             Assessment = assessment;

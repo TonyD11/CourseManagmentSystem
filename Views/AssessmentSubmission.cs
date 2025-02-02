@@ -33,16 +33,17 @@ namespace CourseManagmentSystem.Views
             {
                 filePath = open.FileName;
 
-                string relativeDirectory = "Submissions";
+                string projectDirectory = Path.GetFullPath(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"..\..\"));
+
+                string submissionDirectory = "Submissions";  // Folder where you want to save the file (Views/Submissions)
+                string relativeDirectory = "File";  // Inside 'Views', we have the 'Submissions' folder
                 string filename = Path.GetFileName(filePath);
                 label4.Text = Path.GetFileName(filePath);
 
                 filename = "submission_" + DateTime.Now.ToString("yyyyMMdd_HHmmss") + Path.GetExtension(filePath);
 
 
-                string relativeFilePath = Path.Combine(relativeDirectory, filename);
-
-                string fullDirectoryPath = Path.Combine(Application.StartupPath, relativeDirectory);
+                string fullDirectoryPath = Path.Combine(projectDirectory, submissionDirectory, relativeDirectory);
 
                 if (!Directory.Exists(fullDirectoryPath))
                 {
@@ -123,6 +124,11 @@ namespace CourseManagmentSystem.Views
             {
                 MessageBox.Show(ex.Message);
             }
+        }
+
+        private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

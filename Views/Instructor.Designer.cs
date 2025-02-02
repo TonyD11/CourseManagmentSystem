@@ -29,18 +29,20 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.button5 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.button5 = new System.Windows.Forms.Button();
+            this.button6 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.panel1.Controls.Add(this.button6);
             this.panel1.Controls.Add(this.button5);
             this.panel1.Controls.Add(this.button4);
             this.panel1.Controls.Add(this.button3);
@@ -51,6 +53,16 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(211, 450);
             this.panel1.TabIndex = 0;
+            // 
+            // button5
+            // 
+            this.button5.Location = new System.Drawing.Point(0, 325);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(211, 46);
+            this.button5.TabIndex = 4;
+            this.button5.Text = "Enrollemts";
+            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // button4
             // 
@@ -101,15 +113,15 @@
             this.panel2.Size = new System.Drawing.Size(589, 450);
             this.panel2.TabIndex = 1;
             // 
-            // button5
+            // button6
             // 
-            this.button5.Location = new System.Drawing.Point(0, 325);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(211, 46);
-            this.button5.TabIndex = 4;
-            this.button5.Text = "Enrollemts";
-            this.button5.UseVisualStyleBackColor = true;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
+            this.button6.Location = new System.Drawing.Point(0, 377);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(211, 46);
+            this.button6.TabIndex = 5;
+            this.button6.Text = "Grading";
+            this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // Instructor
             // 
@@ -135,5 +147,6 @@
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button button6;
     }
 }
