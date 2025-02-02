@@ -10,10 +10,10 @@ using System.Windows.Forms;
 
 namespace CourseManagmentSystem.Views
 {
-    public partial class Student : Form
+    public partial class Students : Form
     {
         public string username;
-        public Student(string username)
+        public Students(string username)
         {
             InitializeComponent();
             this.username = username;
@@ -36,6 +36,11 @@ namespace CourseManagmentSystem.Views
         private void button1_Click(object sender, EventArgs e)
         {
             panelController(new EnrollmentForm(username));
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            panelController(new StudentEdit(username));
         }
     }
 }

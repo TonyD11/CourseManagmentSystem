@@ -211,11 +211,17 @@
     <Compile Include="Views\Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\Student.cs">
+    <Compile Include="Views\Students.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Views\Student.Designer.cs">
-      <DependentUpon>Student.cs</DependentUpon>
+    <Compile Include="Views\Students.Designer.cs">
+      <DependentUpon>Students.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\StudentEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\StudentEdit.Designer.cs">
+      <DependentUpon>StudentEdit.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Migrations\202501262316248_InitialMiragation.resx">
       <DependentUpon>202501262316248_InitialMiragation.cs</DependentUpon>
@@ -271,8 +277,11 @@
     <EmbeddedResource Include="Views\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Views\Student.resx">
-      <DependentUpon>Student.cs</DependentUpon>
+    <EmbeddedResource Include="Views\Students.resx">
+      <DependentUpon>Students.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\StudentEdit.resx">
+      <DependentUpon>StudentEdit.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
