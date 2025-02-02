@@ -70,5 +70,40 @@ namespace CourseManagmentSystem.Views
 
 
         }
+
+        private void comboBox3_SelectedIndexChanged(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            string studentname = comboBox3.Text;
+
+            Submissions subm = submissions.Where(c => c.User.Username == studentname).FirstOrDefault();
+
+            string file = subm.FilePath;
+
+            System.Diagnostics.Process.Start(file);
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            decimal grade;
+
+            if (decimal.TryParse(textBox1.Text, out grade))
+            {
+                string studentname = comboBox3.Text;
+                Submissions subm = submissions.Where(c => c.User.Username == studentname).FirstOrDefault();
+
+                SubmissionController submissionController2 = new SubmissionController();
+                submissionController2.addGrade(grade, subm.Id);
+
+                this.Hide();
+            }
+
+
+            
+        }
     }
 }

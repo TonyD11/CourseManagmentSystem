@@ -41,5 +41,23 @@ namespace CourseManagmentSystem.Controller
                 return submissions;
             }
         }
+
+        public void addGrade(decimal grade, int id)
+        {
+            using (AppDbContext db = new AppDbContext()) {
+                Submissions subs = db.Submissions.Where(e  => e.Id == id).FirstOrDefault();
+
+                if (subs != null) 
+                {
+                    subs.Grade = grade;
+
+                    db.SaveChanges();
+
+                    MessageBox.Show("Grade Has been Added");
+
+
+                }
+            }
+        }
     }
 }

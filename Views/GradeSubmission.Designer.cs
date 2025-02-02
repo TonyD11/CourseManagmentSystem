@@ -84,6 +84,7 @@
             this.comboBox3.Name = "comboBox3";
             this.comboBox3.Size = new System.Drawing.Size(154, 24);
             this.comboBox3.TabIndex = 14;
+            this.comboBox3.SelectedIndexChanged += new System.EventHandler(this.comboBox3_SelectedIndexChanged);
             // 
             // label3
             // 
@@ -102,6 +103,7 @@
             this.button1.TabIndex = 16;
             this.button1.Text = "View";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // label5
             // 
@@ -136,6 +138,7 @@
             this.button2.TabIndex = 19;
             this.button2.Text = "Grade";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // GradeSubmission
             // 
