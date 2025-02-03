@@ -47,5 +47,10 @@ namespace CourseManagmentSystem.Views
         {
             panelController(new AssessmentSubmission(username));
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            panelController(new ViewProgress(username));
+        }
     }
 }
