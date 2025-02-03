@@ -32,5 +32,20 @@ namespace CourseManagmentSystem.Views
                 comboBox1.Items.Add(user.Username);
             }
         }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string uname = comboBox1.Text;
+
+            UserController userController = new UserController();
+            User user = userController.getUserDetails(uname);
+
+            SubmissionController submissionController = new SubmissionController();
+            List<Submissions> submissions = submissionController.usersSubmission(user);
+
+            DataTable dataTable = new DataTable();
+
+            dataGridView1.DataSource = submissions;
+        }
     }
 }

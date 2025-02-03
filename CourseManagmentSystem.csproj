@@ -123,9 +123,9 @@
     <Compile Include="Migrations\202501262316248_InitialMiragation.Designer.cs">
       <DependentUpon>202501262316248_InitialMiragation.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202501272356263_Assessment.cs" />
-    <Compile Include="Migrations\202501272356263_Assessment.Designer.cs">
-      <DependentUpon>202501272356263_Assessment.cs</DependentUpon>
+    <Compile Include="Migrations\202501272356263_Assessments.cs" />
+    <Compile Include="Migrations\202501272356263_Assessments.Designer.cs">
+      <DependentUpon>202501272356263_Assessments.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\202502011713547_Enrollment.cs" />
     <Compile Include="Migrations\202502011713547_Enrollment.Designer.cs">
@@ -250,8 +250,8 @@
     <EmbeddedResource Include="Migrations\202501262316248_InitialMiragation.resx">
       <DependentUpon>202501262316248_InitialMiragation.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202501272356263_Assessment.resx">
-      <DependentUpon>202501272356263_Assessment.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202501272356263_Assessments.resx">
+      <DependentUpon>202501272356263_Assessments.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202502011713547_Enrollment.resx">
       <DependentUpon>202502011713547_Enrollment.cs</DependentUpon>

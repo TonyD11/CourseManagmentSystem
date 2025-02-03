@@ -7,6 +7,7 @@ using System.Data.Entity;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using CourseManagmentSystem.Model;
+using CourseManagmentSystem.Migrations;
 
 namespace CourseManagmentSystem.Controller
 {
@@ -28,7 +29,7 @@ namespace CourseManagmentSystem.Controller
             }
         }
 
-        public List<Submissions> submissions(Assessment assessment)
+        public List<Submissions> submissions(Model.Assessment assessment)
         {
             using (AppDbContext db = new AppDbContext())
             {
@@ -57,6 +58,20 @@ namespace CourseManagmentSystem.Controller
 
 
                 }
+            }
+        }
+
+        public List<Submissions> usersSubmission(User user)
+        {
+            using (AppDbContext db = new AppDbContext())
+            {
+                List<Submissions> subs = db.Submissions
+                                            .Include(e => e.User)
+                                            .Include(e => e.Assessment)
+                                            .Where(s => s.User.Id == user.Id)
+                                            .ToList();
+
+                return subs;
             }
         }
     }
